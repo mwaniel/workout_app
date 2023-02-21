@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import {Box,Button,Typography,TextField,Stack} from '@mui/material';
+import { fetchData,exercisesOptions } from '../utils/fetchData';
 
 
 
@@ -8,7 +9,7 @@ const SearchExercises = () => {
     const [search,setSearch] = useState('');
     const handleSearch = async () =>{
         if(search){
-            const exercisesData = await fetchData(); 
+            const exercisesData = await fetchData('https://exercisedb.rapidapi.com'); 
         }
     }
   return (
